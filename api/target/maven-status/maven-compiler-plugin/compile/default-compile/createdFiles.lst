@@ -1,0 +1,10 @@
+org\openmrs\module\idiacademy\utils\ExtensionFormUtil.class
+org\openmrs\module\idiacademy\IdiacademyConfig.class
+org\openmrs\module\idiacademy\api\IdiacademyService.class
+org\openmrs\module\idiacademy\api\impl\IdiacademyServiceImpl.class
+org\openmrs\module\idiacademy\IdiacademyActivator.class
+org\openmrs\module\idiacademy\api\dao\IdiacademyDao.class
+org\openmrs\module\idiacademy\activator\Initializer.class
+org\openmrs\module\idiacademy\utils\DateFormatUtil.class
+org\openmrs\module\idiacademy\Item.class
+org\openmrs\module\idiacademy\activator\HtmlFormsInitializer.class

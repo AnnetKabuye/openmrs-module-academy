@@ -1,0 +1,2 @@
+org\openmrs\module\idiacademy\web\controller\IdiacademyController.class
+org\openmrs\module\idiacademy\fragment\controller\UsersFragmentController.class

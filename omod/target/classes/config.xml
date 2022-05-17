@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module configVersion="1.2">
+	
+	<!-- Base Module Properties -->
+	<id>idiacademy</id>
+	<name>Idiacademy</name>
+	<version>1.0.0-SNAPSHOT</version>
+	<package>org.openmrs.module.idiacademy</package>
+	<author>Annet</author>
+	<description>
+			This module contain a special distribution for programs implemeted by IDI in UgandaEMR
+	</description>
+
+	<activator>org.openmrs.module.idiacademy.IdiacademyActivator</activator>
+	
+	<!-- <updateURL>https://modules.openmrs.org/modules/download/idiacademy/update.rdf</updateURL> -->
+	<!-- /Base Module Properties -->
+	
+	<require_version>1.11.2</require_version>
+
+	<require_modules>
+		<require_module version="2.14.0">
+			org.openmrs.module.appframework
+		</require_module>
+		<require_module version="3.17.0">
+			org.openmrs.module.uiframework
+		</require_module>
+		<require_module version="${uicommonsModuleVersion}">
+			org.openmrs.module.uicommons
+		</require_module>
+		<require_module version="${appuiVersion}">
+			org.openmrs.module.appui
+		</require_module>
+		<require_module>
+			org.openmrs.module.formentryapp
+		</require_module>
+		<require_module>
+			org.openmrs.module.htmlformentry
+		</require_module>
+		<require_module>
+			org.openmrs.module.htmlformentryui
+		</require_module>
+		<require_module>
+			org.openmrs.module.metadatadeploy
+		</require_module>
+		<require_module>
+			org.openmrs.module.uiframework
+		</require_module>
+	</require_modules>
+
+	<aware_of_modules>
+		<aware_of_module>org.openmrs.module.legacyui</aware_of_module>
+	</aware_of_modules>
+	
+	
+	<!-- AOP
+	<advice>
+		<point>org.openmrs.api.FormService</point>
+		<class>org.openmrs.module.idiacademy.advice.DuplicateFormAdvisor</class>
+	</advice>
+	 /AOP -->
+	
+	
+	<!-- Required Privileges 
+	<privilege>
+		<name>Form Entry</name>
+		<description>Allows user to access Form Entry pages/functions</description>
+	</privilege>
+	 /Required Privileges -->
+
+
+	<!-- Required Global Properties 
+	<globalProperty>
+		<property>idiacademy.someProperty</property>
+		<defaultValue></defaultValue>
+		<description>
+			A description of the global property goes here.  The description
+			should explain enough for administrators to understand the purpose
+			and possible values for the global property.
+		</description>
+	</globalProperty>
+	/Required Global Properties -->
+	
+	<!--
+	<dwr>
+		<allow>
+			<create creator="new" javascript="DWRFormEntryService">
+				<param name="class" value="org.openmrs.module.idiacademy.web.DWRFormEntryService"/>
+				<include method="enterForm"/>
+			</create>
+		</allow>
+
+		<signatures>
+			<![CDATA[
+			import org.openmrs.module.idiacademy.web.DWRFormEntryService;
+			DWRFormEntryService.enterForm(Integer patientId, Integer formId, boolean useEncounter, List<String> fields);
+			]]>
+		</signatures>	
+	</dwr>
+	-->
+	
+	<!-- Servlets -->
+	<!-- Accessed through the url /pageContext()/moduleServlet/<moduleId>/<servlet-name> 
+	<servlet>
+		<servlet-name>formDownload</servlet-name>
+		<servlet-class>org.openmrs.module.idiacademy.web.FormDownloadServlet</servlet-class>
+	</servlet>
+	-->
+	<!-- /Servlets -->
+	
+	
+	<!-- Internationalization -->
+	<!-- All message codes should start with idiacademy.* -->
+	<messages>
+		<lang>en</lang>
+		<file>messages.properties</file>
+	</messages>
+	<messages>
+		<lang>fr</lang>
+		<file>messages_fr.properties</file>
+	</messages>
+	<messages>
+		<lang>es</lang>
+		<file>messages_es.properties</file>
+	</messages>
+	<!-- /Internationalization -->
+	
+</module>
+
