@@ -1,0 +1,21 @@
+name: GitlabSync
+
+on:
+  - push
+  - delete
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    name: Git Repo Sync
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Push To Gitlab
+      run: |
+        echo Starting to push openmrs-module-academy repo to APN Digital register gitlab repo
+        git config user.name "ananungi"
+        git config user.email "ananungi@idi.co.ug"
+        git remote set-url origin "http://oauth2:Hu4jfyxz1-3fTMErfXZ1@196.43.147.32/theacademy/apn-digital-register-ugandaemr-module.git"
+        git push origin main --force
